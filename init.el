@@ -30,7 +30,6 @@
     shell-pop
     sequential-command
     magit
-    git-gutter
     helm
     ))
 
