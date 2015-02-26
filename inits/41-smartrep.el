@@ -1,0 +1,2 @@
+;; smartrep
+(require 'smartrep)
