@@ -31,6 +31,7 @@
     sequential-command
     magit
     helm
+    dirtree
     ))
 
 (let ((not-installed (loop for x in installing-package-list
