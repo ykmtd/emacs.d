@@ -47,3 +47,10 @@
 
 ;; magit
 (define-key global-map (kbd "C-x C-g")     'magit-status)
+
+;; window resize
+(smartrep-define-key global-map "C-c"
+  '(("h" . shrink-window-horizontally)
+    ("l" . enlarge-window-horizontally)
+    ("j" . shrink-window)
+    ("k" . enlarge-window)))
