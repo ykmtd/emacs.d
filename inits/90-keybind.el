@@ -46,7 +46,7 @@
   (define-key org-mode-map "\C-e" 'org-seq-end))
 
 ;; magit
-(define-key global-map (kbd "C-x C-g")     'magit-status)
+(define-key global-map (kbd "C-c C-g")     'magit-status)
 
 ;; window resize
 (smartrep-define-key global-map "C-c"
