@@ -13,6 +13,7 @@
 
 ;; \C-h
 (global-set-key "\C-h" 'delete-backward-char)
+(define-key isearch-mode-map (kbd "C-h") 'isearch-delete-char)
 
 ;; backup files
 (setq make-backup-files nil)
