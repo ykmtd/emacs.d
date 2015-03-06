@@ -54,6 +54,3 @@
     ("l" . enlarge-window-horizontally)
     ("j" . shrink-window)
     ("k" . enlarge-window)))
-
-;; helm-ls-git
-(global-set-key (kbd "C-x C-G") 'helm-browse-project)
