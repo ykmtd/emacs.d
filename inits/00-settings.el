@@ -58,3 +58,6 @@
 
 ;; tab
 (setq-default indent-tabs-mode nil)
+
+;; auto-revert-mode
+(global-auto-revert-mode 1)
