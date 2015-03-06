@@ -32,6 +32,7 @@
     magit
     helm
     dirtree
+    helm-ls-git
     ))
 
 (let ((not-installed (loop for x in installing-package-list
