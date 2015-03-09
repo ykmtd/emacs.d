@@ -1,4 +1,4 @@
-;; thme
+;; theme
 (load-theme 'deeper-blue t)
 
 ;; disable startup mesage
@@ -37,10 +37,27 @@
 (defun delete-trailing-whitespace-with-exclude-pattern ()
   (interactive)
   (cond ((equal nil (loop for pattern in delete-trailing-whitespace-exclude-pattenrs
-			  thereis (string-match pattern buffer-file-name)))
-	 (delete-trailing-whitespace))))
+                          thereis (string-match pattern buffer-file-name)))
+         (delete-trailing-whitespace))))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace-with-exclude-pattern)
+
+;; tab
+(setq-default tab-width 4)
+(setq default-tab-width 4)
+(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 64
+                        60 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
+(setq-default indent-tabs-mode nil)
+
+(defun untabify-except-makefiles ()
+  "Replace tabs with spaces except in makefiles."
+  (unless (derived-mode-p 'makefile-mode)
+    (untabify (point-min) (point-max))))
+
+(add-hook 'before-save-hook 'untabify-except-makefiles)
+
+;; auto-revert-mode
+(global-auto-revert-mode 1)
 
 ;; saveplace
 (load "saveplace")
@@ -52,12 +69,6 @@
   (setq recentf-exclude '(".recentf"))
   (setq recentf-auto-cleanup 10)
   (setq recentf-auto-save-timer
-	(run-with-idle-timer 30 t 'recentf-save-list))
+        (run-with-idle-timer 30 t 'recentf-save-list))
   (recentf-mode 1)
-    (require 'recentf-ext))
-
-;; tab
-(setq-default indent-tabs-mode nil)
-
-;; auto-revert-mode
-(global-auto-revert-mode 1)
+  (require 'recentf-ext))
