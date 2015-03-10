@@ -10,4 +10,5 @@
 
 (set-face-attribute 'whitespace-tab nil
                     :foreground "LightSkyBlue"
+                    :background "Black"
                     :underline t)
