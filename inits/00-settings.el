@@ -59,6 +59,22 @@
 ;; auto-revert-mode
 (global-auto-revert-mode 1)
 
+;; next-word
+(defun next-word (p)
+   "Move point to the beginning of the next word, past any spaces"
+   (interactive "d")
+   (forward-word)
+   (forward-word)
+   (backward-word))
+
+;; next-sentence
+(defun next-sentence (p)
+   "Move point to the beginning of the next sentence, past any spaces"
+   (interactive "d")
+   (forward-sentence)
+   (forward-sentence)
+   (backward-sentence))
+
 ;; saveplace
 (load "saveplace")
 (setq-default save-place t)

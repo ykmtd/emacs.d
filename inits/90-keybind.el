@@ -49,8 +49,15 @@
 (define-key global-map (kbd "C-c C-g")     'magit-status)
 
 ;; window resize
-(smartrep-define-key global-map "C-c"
+(smartrep-define-key global-map "C-c C-w"
   '(("h" . shrink-window-horizontally)
     ("l" . enlarge-window-horizontally)
     ("j" . shrink-window)
     ("k" . enlarge-window)))
+
+;; move
+(smartrep-define-key global-map "C-c"
+  '(("f" . next-word)
+    ("b" . backward-word)
+    ("n" . next-sentence)
+    ("p" . backward-sentence)))
