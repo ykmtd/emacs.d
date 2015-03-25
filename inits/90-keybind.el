@@ -13,6 +13,14 @@
 (define-key global-map (kbd "C-c i")   'helm-imenu)
 (define-key global-map (kbd "C-x b")   'helm-buffers-list)
 
+;; helm-swoop
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+
 ;; region-bindings-mode + expand-region/multiple-cursors
 (define-key region-bindings-mode-map "e" 'er/expand-region)
 (define-key region-bindings-mode-map "r" 'er/contract-region)
