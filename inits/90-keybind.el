@@ -23,7 +23,7 @@
 
 ;; region-bindings-mode + expand-region/multiple-cursors
 (define-key region-bindings-mode-map "e" 'er/expand-region)
-(define-key region-bindings-mode-map "r" 'er/contract-region)
+(define-key region-bindings-mode-map "E" 'er/contract-region)
 (define-key region-bindings-mode-map "n" 'mc/mark-next-like-this)
 (define-key region-bindings-mode-map "p" 'mc/mark-previous-like-this)
 (define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
