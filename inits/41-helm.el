@@ -38,3 +38,4 @@
 
 ;; helm-swoop
 (require 'helm-swoop)
+(setq helm-swoop-pre-input-function (lambda () ""))
