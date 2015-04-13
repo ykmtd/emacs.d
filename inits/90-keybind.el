@@ -69,3 +69,7 @@
     ("b" . backward-word)
     ("n" . next-sentence)
     ("p" . backward-sentence)))
+
+;; region-bindings-mode + hl-anything
+(define-key region-bindings-mode-map "h" 'hl-highlight-thingatpt-local)
+(define-key region-bindings-mode-map "H" 'hl-unhighlight-all-local)

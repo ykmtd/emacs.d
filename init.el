@@ -34,6 +34,7 @@
     dirtree
     helm-swoop
     cuda-mode
+    hl-anything
     ))
 
 (let ((not-installed (loop for x in installing-package-list
