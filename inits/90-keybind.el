@@ -63,13 +63,18 @@
     ("j" . shrink-window)
     ("k" . enlarge-window)))
 
-;; move
+;; move + bm
 (smartrep-define-key global-map "C-c"
   '(("f" . next-word)
     ("b" . backward-word)
     ("n" . next-sentence)
-    ("p" . backward-sentence)))
+    ("p" . backward-sentence)
+    ("k" . bm-previous)
+    ("j" . bm-next)))
 
 ;; region-bindings-mode + hl-anything
 (define-key region-bindings-mode-map "h" 'hl-highlight-thingatpt-local)
 (define-key region-bindings-mode-map "H" 'hl-unhighlight-all-local)
+
+;; bm
+(global-set-key (kbd "M-SPC") 'bm-toggle)

@@ -35,6 +35,7 @@
     helm-swoop
     cuda-mode
     hl-anything
+    bm
     ))
 
 (let ((not-installed (loop for x in installing-package-list
