@@ -36,6 +36,9 @@
     cuda-mode
     hl-anything
     bm
+    ruby-end
+    ruby-block
+    quickrun
     ))
 
 (let ((not-installed (loop for x in installing-package-list

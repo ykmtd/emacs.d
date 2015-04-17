@@ -78,3 +78,6 @@
 
 ;; bm
 (global-set-key (kbd "M-SPC") 'bm-toggle)
+
+;; quickrun
+(global-set-key (kbd "C-\\") 'quickrun)
