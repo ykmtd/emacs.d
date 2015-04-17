@@ -15,10 +15,6 @@
 
 ;; helm-swoop
 (global-set-key (kbd "M-i") 'helm-swoop)
-(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
-(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
-(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
-(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
 (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
 
 ;; region-bindings-mode + expand-region/multiple-cursors
@@ -53,9 +49,6 @@
   (define-key org-mode-map "\C-a" 'org-seq-home)
   (define-key org-mode-map "\C-e" 'org-seq-end))
 
-;; magit
-(define-key global-map (kbd "C-c C-g")     'magit-status)
-
 ;; window resize
 (smartrep-define-key global-map "C-c C-w"
   '(("h" . shrink-window-horizontally)
@@ -71,10 +64,6 @@
     ("p" . backward-sentence)
     ("k" . bm-previous)
     ("j" . bm-next)))
-
-;; region-bindings-mode + hl-anything
-(define-key region-bindings-mode-map "h" 'hl-highlight-thingatpt-local)
-(define-key region-bindings-mode-map "H" 'hl-unhighlight-all-local)
 
 ;; bm
 (global-set-key (kbd "M-SPC") 'bm-toggle)
