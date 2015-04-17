@@ -1,8 +1,5 @@
 (if window-system
     (progn
-      ;; theme
-      (load-theme 'wombat t)
-
       ;; font settings
       (set-default-font "Inconsolata-11")
       (set-face-font 'default "Inconsolata-11")

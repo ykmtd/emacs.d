@@ -1,3 +1,6 @@
+;; theme
+(load-theme 'wombat t)
+
 ;; disable startup mesage
 (setq inhibit-startup-message t)
 
