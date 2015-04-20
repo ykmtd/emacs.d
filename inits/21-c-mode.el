@@ -1,16 +1,15 @@
-;; cuda-mode
-
 ;; google-c-style
 (require 'google-c-style)
 (setq auto-mode-alist
       (append
        '(
-         ("\\.cu$" . cuda-mode)
-         ("\\.cuda$" . cuda-mode)
+         ("\\.c$" . c++-mode)
+         ("\\.h$" . c++-mode)
+         ("\\.ino$" . c++-mode)
          )
        auto-mode-alist))
 
-(add-hook 'cuda-mode-hook
+(add-hook 'c-mode-common-hook
           '(lambda ()
              (google-set-c-style)
              (electric-pair-mode t)

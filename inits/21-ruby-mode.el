@@ -11,5 +11,4 @@
              (electric-pair-mode t)
              (add-to-list 'electric-pair-pairs '(?| . ?|))
              (electric-indent-mode t)
-             (electric-layout-mode t)
              ))
