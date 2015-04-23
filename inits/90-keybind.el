@@ -70,3 +70,6 @@
 
 ;; quickrun
 (global-set-key (kbd "C-\\") 'quickrun)
+
+;; bbyac
+(define-key bbyac-mode-map (kbd "C-l") 'bbyac-expand-symbols)

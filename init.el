@@ -39,6 +39,8 @@
     ruby-end
     ruby-block
     quickrun
+    bbyac
+    ido-vertical-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
