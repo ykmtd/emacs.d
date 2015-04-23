@@ -5,6 +5,7 @@
 (add-hook 'verilog-mode-hook '(lambda ()
                                 (font-lock-mode 1)
                                 (electric-pair-mode t)
+                                (add-to-list 'electric-pair-pairs '(?[ . ?]))
                                 (electric-indent-mode t)
                                 ))
 
