@@ -45,16 +45,27 @@
 ;; sequential-command
 (global-set-key "\C-a" 'seq-home)
 (global-set-key "\C-e" 'seq-end)
-(when (require 'org nil t)
-  (define-key org-mode-map "\C-a" 'org-seq-home)
-  (define-key org-mode-map "\C-e" 'org-seq-end))
 
-;; window resize
-(smartrep-define-key global-map "C-c C-w"
-  '(("h" . shrink-window-horizontally)
-    ("l" . enlarge-window-horizontally)
-    ("j" . shrink-window)
-    ("k" . enlarge-window)))
+;; window
+(setq windmove-wrap-around t)
+(global-unset-key "\C-o")
+(smartrep-define-key global-map "C-o"
+  '(("k"   . windmove-up)
+    ("j"   . windmove-down)
+    ("h"   . windmove-left)
+    ("l"   . windmove-right)
+    ("C-p" . windmove-up)
+    ("C-n" . windmove-down)
+    ("C-b" . windmove-left)
+    ("C-f" . windmove-right)
+    ("C-k" . enlarge-window)
+    ("C-j" . shrink-window)
+    ("C-h" . shrink-window-horizontally)
+    ("C-l" . enlarge-window-horizontally)
+    ("o"   . other-window)
+    ("3"   . split-window-right)
+    ("2"   . split-window-below)
+    ("0"   . delete-window)))
 
 ;; move + bm
 (smartrep-define-key global-map "C-c"
