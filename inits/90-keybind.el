@@ -48,16 +48,11 @@
 
 ;; window
 (setq windmove-wrap-around t)
-(global-unset-key "\C-o")
-(smartrep-define-key global-map "C-o"
+(smartrep-define-key global-map "C-c o"
   '(("k"   . windmove-up)
     ("j"   . windmove-down)
     ("h"   . windmove-left)
     ("l"   . windmove-right)
-    ("C-p" . windmove-up)
-    ("C-n" . windmove-down)
-    ("C-b" . windmove-left)
-    ("C-f" . windmove-right)
     ("C-k" . enlarge-window)
     ("C-j" . shrink-window)
     ("C-h" . shrink-window-horizontally)

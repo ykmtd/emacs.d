@@ -31,16 +31,13 @@
     sequential-command
     magit
     helm
-    dirtree
     helm-swoop
     cuda-mode
-    hl-anything
     bm
     ruby-end
     ruby-block
     quickrun
-    bbyac
-    ido-vertical-mode
+    centimacro
     ))
 
 (let ((not-installed (loop for x in installing-package-list

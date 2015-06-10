@@ -25,6 +25,9 @@
 ;; linum
 (custom-set-variables '(global-linum-mode t))
 (setq linum-format "%3d ")
+(setq linum-delay t)
+(defadvice linum-schedule (around my-linum-schedule () activate)
+  (run-with-idle-timer 0.2 nil #'linum-update-current))
 
 ;; ediff
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)

@@ -1,0 +1,2 @@
+;; centimacro
+(require 'centimacro)
