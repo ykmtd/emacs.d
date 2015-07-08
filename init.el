@@ -38,6 +38,8 @@
     ruby-block
     quickrun
     centimacro
+    migemo
+    helm-migemo
     ))
 
 (let ((not-installed (loop for x in installing-package-list

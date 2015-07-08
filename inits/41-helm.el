@@ -35,7 +35,6 @@
                         (substring input-pattern 1)
                       (concat ".*" input-pattern)))))))
 
-
 ;; helm-swoop
 (require 'helm-swoop)
 (setq helm-swoop-pre-input-function (lambda () ""))
