@@ -38,3 +38,14 @@
 ;; helm-swoop
 (require 'helm-swoop)
 (setq helm-swoop-pre-input-function (lambda () ""))
+
+
+;; helm-gtags
+(require 'helm-gtags)
+
+(setq helm-gtags-path-style 'root)
+(setq helm-gtags-auto-update t)
+
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'ruby-mode-hook 'helm-gtags-mode)
+(add-hook 'python-mode-hook 'helm-gtags-mode)

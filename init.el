@@ -40,6 +40,7 @@
     centimacro
     migemo
     helm-migemo
+    helm-gtags
     ))
 
 (let ((not-installed (loop for x in installing-package-list
