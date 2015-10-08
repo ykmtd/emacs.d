@@ -41,6 +41,7 @@
     migemo
     helm-migemo
     helm-gtags
+    foreign-regexp
     ))
 
 (let ((not-installed (loop for x in installing-package-list
