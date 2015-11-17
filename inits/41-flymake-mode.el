@@ -1,7 +1,7 @@
 ;; flymake
 (autoload 'flymake-mode "flymake" "flymake-mode for automatic syntax check" t)
 ;; flymake-mode for Verilog HDL
-(when (executable-find ("iverilog"))
+(when (executable-find "iverilog")
   (add-hook 'verilog-mode-hook (lambda () (flymake-mode t))))
 
 ;; flymake settings
