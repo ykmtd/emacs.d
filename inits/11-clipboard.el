@@ -11,6 +11,12 @@
   (interactive)
   (shell-command-to-string "xclip -o -select clipboard"))
 
+(when (and (not window-system)
+           (executable-find "xclip"))
+  (setq interprogram-cut-function 'cut-with-xclip)
+  (setq interprogram-paste-function 'paste-with-xclip))
+
+
 (defun cut-with-pbcopy (text &optional rest)
   (interactive)
   (let ((process-connection-type nil))
@@ -22,14 +28,21 @@
   (interactive)
   (shell-command-to-string "pbpaste"))
 
-(when (and (not window-system)
-           (executable-find "xclip"))
-  (setq interprogram-cut-function 'cut-with-xclip)
-  (setq interprogram-paste-function 'paste-with-xclip))
+(defun pb-mode ()
+  "PB mode "
+  (interactive)
+  (setq mode-name "PB")
+  (setq major-mode 'pb-mode)
 
-(when (and (not window-system)
-           (executable-find "pbcopy"))
-  (setq interprogram-cut-function 'cut-with-pbcopy)
-  (setq interprogram-paste-function 'paste-with-pbpaste))
+  (run-hooks 'pb-mode-hook))
+
+(provide 'pb-mode)
+
+(add-hook 'pb-mode-hook '(lambda ()
+                           (when (and (not window-system)
+                                      (executable-find "pbcopy"))
+                             (setq interprogram-cut-function 'cut-with-pbcopy)
+                             (setq interprogram-paste-function 'paste-with-pbpaste))
+                           ))
 
 (if window-system (setq x-select-enable-clipboard t))
