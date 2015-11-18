@@ -12,6 +12,8 @@
          "** TODO %?   :bug:\n  %T\n %a\n %i\n")
         ("i" "Idea" entry (file+headline nil "Idea")
          "** %?\n %U\n %i\n %a\n %i\n")
+        ("m" "Memo" entry (file+headline nil "Memo")
+         "** %?\n %U\n %i\n %a\n %i\n")
         )
       )
 (global-set-key (kbd "C-c c") 'org-capture)
