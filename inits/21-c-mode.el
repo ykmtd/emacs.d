@@ -15,5 +15,7 @@
              (electric-pair-mode t)
              (electric-indent-mode t)
              (electric-layout-mode t)
+             (hs-minor-mode 1)
+             (define-key hs-minor-mode-map (kbd "C-i C-i") 'hs-toggle-hiding)
              (add-to-list 'electric-layout-rules '(?{ . after)))
              )
