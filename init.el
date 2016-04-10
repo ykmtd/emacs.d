@@ -44,8 +44,8 @@
     yasnippet
     company
     irony
-    company-irony
-    flycheck-irony
+    auto-complete
+;;    ac-irony
     helm-c-yasnippet
 ))
 
