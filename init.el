@@ -15,7 +15,6 @@
     init-loader
     popwin
     undo-tree
-    auto-complete
     google-c-style
     anzu
     flycheck
@@ -42,7 +41,8 @@
     helm-migemo
     helm-gtags
     foreign-regexp
-    ))
+    company
+))
 
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
