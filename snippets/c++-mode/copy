@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: copy
+# key: copy
+# --
+copy(${1:v}${2:.begin()}, ${3:v}${4:.end()}, back_inserter(${5:dst}));
