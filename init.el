@@ -47,6 +47,7 @@
     company-irony
     flycheck-irony
     helm-c-yasnippet
+    sr-speedbar
 ))
 
 (let ((not-installed (loop for x in installing-package-list
