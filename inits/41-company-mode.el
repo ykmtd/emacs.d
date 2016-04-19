@@ -30,7 +30,7 @@
 
 
 (define-key company-active-map (kbd "C-s") 'company-filter-candidates)
-(define-key comapny-active-map (kbd "C-i") 'company-complete-selection)
+(define-key company-active-map (kbd "C-i") 'company-complete-selection)
 
 (define-key company-active-map (kbd "C-h") nil)
 (define-key company-active-map (kbd "M-d") 'company-show-doc-buffer)
