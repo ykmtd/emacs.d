@@ -41,7 +41,13 @@
     helm-migemo
     helm-gtags
     foreign-regexp
+    yasnippet
     company
+    irony
+    company-irony
+    flycheck-irony
+    helm-c-yasnippet
+    sr-speedbar
 ))
 
 (let ((not-installed (loop for x in installing-package-list
