@@ -13,8 +13,7 @@
 
 (when (and (not window-system)
            (executable-find "xclip"))
-  (setq interprogram-cut-function 'cut-with-xclip)
-  (setq interprogram-paste-function 'paste-with-xclip))
+  (setq interprogram-cut-function 'cut-with-xclip))
 
 
 (defun cut-with-pbcopy (text &optional rest)

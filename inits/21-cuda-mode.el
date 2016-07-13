@@ -1,7 +1,6 @@
 ;; cuda-mode
 
 ;; google-c-style
-(require 'google-c-style)
 (setq auto-mode-alist
       (append
        '(

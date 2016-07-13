@@ -49,3 +49,10 @@
 (add-hook 'c-mode-hook 'helm-gtags-mode)
 (add-hook 'ruby-mode-hook 'helm-gtags-mode)
 (add-hook 'python-mode-hook 'helm-gtags-mode)
+
+(add-hook 'helm-gtags-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-c t") 'helm-gtags-find-tag)
+             (local-set-key (kbd "C-c C-c r") 'helm-gtags-find-rtag)
+             (local-set-key (kbd "C-c C-c p") 'helm-gtags-previous-history)
+             ))

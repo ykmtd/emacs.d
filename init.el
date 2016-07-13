@@ -15,7 +15,6 @@
     init-loader
     popwin
     undo-tree
-    google-c-style
     anzu
     flycheck
     flymake
@@ -41,7 +40,6 @@
     helm-migemo
     helm-gtags
     foreign-regexp
-    yasnippet
     company
     irony
     company-irony
