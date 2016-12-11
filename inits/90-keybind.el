@@ -34,11 +34,6 @@
 (define-key region-bindings-mode-map "O" 'mc/reverse-regions)
 
 ;; shell-pop
-(eval-after-load "yatex-mode"
-  '(progn
-     (define-key org-mode-map (kbd "C-t") nil)
-     )
-  )
 (global-unset-key (kbd "C-t"))
 (global-set-key (kbd "C-t") 'shell-pop)
 
@@ -76,6 +71,3 @@
 
 ;; quickrun
 (global-set-key (kbd "C-\\") 'quickrun)
-
-;; bbyac
-(define-key bbyac-mode-map (kbd "C-l") 'bbyac-expand-symbols)

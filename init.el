@@ -17,8 +17,6 @@
     undo-tree
     anzu
     flycheck
-    flymake
-    flymake-cursor
     markdown-mode
     wdired
     expand-region
@@ -36,8 +34,6 @@
     ruby-block
     quickrun
     centimacro
-    migemo
-    helm-migemo
     helm-gtags
     foreign-regexp
     company
@@ -45,8 +41,9 @@
     company-irony
     flycheck-irony
     helm-c-yasnippet
-    sr-speedbar
-))
+    jedi-core
+    company-jedi
+    ))
 
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))

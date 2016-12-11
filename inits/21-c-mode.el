@@ -1,5 +1,5 @@
 ;; google-c-style
-(require 'google-c-style)
+;; (require 'google-c-style)
 
 (add-hook 'c-mode-common-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
@@ -20,7 +20,7 @@
 
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (google-set-c-style)
+             ;; (google-set-c-style)
              (electric-pair-mode t)
              (electric-indent-mode t)
              (irony-mode 1)

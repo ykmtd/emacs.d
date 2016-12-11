@@ -8,5 +8,4 @@
 (global-whitespace-mode t)
 
 (set-face-attribute 'whitespace-tab nil
-                    :foreground "LightSkyBlue"
                     :underline t)

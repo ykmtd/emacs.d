@@ -19,6 +19,13 @@
                           (:description . "Compile Verilog file with iverilog and execute"))
                         :mode 'verilog-mode))
 
+(when (executable-find "python3")
+  (quickrun-add-command "python3"
+                        '((:command . "python3")
+                          (:exec . ("%c %s"))
+                          (:description . "Run python"))
+                        :mode 'python-mode))
+
 (when (executable-find "gimli")
   (quickrun-add-command "markdown-gimli"
                         '((:command . "gimli")

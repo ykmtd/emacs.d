@@ -5,6 +5,7 @@
 (setq company-idle-delay 0)
 
 (add-to-list 'company-backends 'company-irony)
+(add-to-list 'company-backends 'company-jedi)
 
 ;; color scheme
 (set-face-attribute 'company-tooltip nil

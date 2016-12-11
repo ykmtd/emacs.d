@@ -3,6 +3,8 @@
 (setq-default flycheck-gcc-openmp t)
 (add-hook 'c++-mode-hook 'flycheck-mode)
 (add-hook 'latex-mode-hook 'flycheck-mode)
+(add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'verilog-mode-hook 'flycheck-mode)
 
 (eval-after-load "flycheck"
   '(progn
