@@ -5,7 +5,7 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (require 'cl)
@@ -43,15 +43,34 @@
     helm-c-yasnippet
     jedi-core
     company-jedi
+    volatile-highlights
+    auto-highlight-symbol
     ))
 
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
                             collect x)))
-  (when not-installed
+   (when not-installed
     (package-refresh-contents)
-    (dolist (pkg not-installed)
-        (package-install pkg))))
+     (dolist (pkg not-installed)
+         (package-install pkg))))
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(foreign-regexp/regexp-type (quote ruby))
+ '(global-linum-mode t)
+ '(package-selected-packages
+   (quote
+    (cmake-mode auto-highlight-symbol volatile-highlights company-jedi jedi-core helm-c-yasnippet flycheck-irony company-irony irony company foreign-regexp helm-gtags centimacro quickrun ruby-block ruby-end bm cuda-mode helm-swoop helm magit sequential-command shell-pop smartrep multiple-cursors region-bindings-mode expand-region markdown-mode flycheck anzu undo-tree popwin init-loader)))
+ '(reb-re-syntax (quote foreign-regexp)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

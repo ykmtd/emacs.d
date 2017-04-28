@@ -2,10 +2,10 @@
 
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-arround t)
-(setq company-idle-delay 0)
+(setq company-idle-delay 0.2)
 
 (add-to-list 'company-backends 'company-irony)
-(add-to-list 'company-backends 'company-jedi)
+;; (add-to-list 'company-backends 'company-jedi)
 
 ;; color scheme
 (set-face-attribute 'company-tooltip nil

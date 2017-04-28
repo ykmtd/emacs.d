@@ -71,3 +71,4 @@
 
 ;; quickrun
 (global-set-key (kbd "C-\\") 'quickrun)
+(global-set-key (kbd "M-\\") 'helm-quickrun)

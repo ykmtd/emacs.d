@@ -5,7 +5,7 @@
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 (setq irony-lang-compile-option-alist
-      (quote ((c++-mode . "c++ -std=c++11 -lstdc++ -march=native")
+      (quote ((c++-mode . "c++ -std=c++11 -lstdc++ -march=native -I/home/matsuda/include")
               (c-mode . "c")
               (objc-mode . "objective-c"))))
 

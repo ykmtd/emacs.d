@@ -2,12 +2,12 @@
 (require 'whitespace)
 
 (setq whitespace-style '(face
-                         trailing
+                         ;; trailing
                          tabs
                          ))
 
 (set-face-attribute 'whitespace-tab nil
-                    :foreground 'unspecified
+                    :foreground "#236fc6"
                     :background 'unspecified
                     :underline t)
 

@@ -63,7 +63,7 @@
   (unless (derived-mode-p 'makefile-mode)
     (untabify (point-min) (point-max))))
 
-(add-hook 'before-save-hook 'untabify-except-makefiles)
+;; (add-hook 'before-save-hook 'untabify-except-makefiles)
 
 ;; auto-revert-mode
 (global-auto-revert-mode 1)

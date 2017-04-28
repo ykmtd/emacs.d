@@ -12,4 +12,5 @@
       verilog-indent-level-module      4
       verilog-indent-level-declaration 4
       verilog-indent-level-behavioral  4
-      verilog-indent-level-directive   4)
+      verilog-indent-level-directive   4
+      verilog-auto-newline nil)
