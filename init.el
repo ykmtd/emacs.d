@@ -66,7 +66,7 @@
  '(global-linum-mode t)
  '(package-selected-packages
    (quote
-    (cmake-mode auto-highlight-symbol volatile-highlights company-jedi jedi-core helm-c-yasnippet flycheck-irony company-irony irony company foreign-regexp helm-gtags centimacro quickrun ruby-block ruby-end bm cuda-mode helm-swoop helm magit sequential-command shell-pop smartrep multiple-cursors region-bindings-mode expand-region markdown-mode flycheck anzu undo-tree popwin init-loader)))
+    (dumb-jump counsel neotree flycheck-status-emoji cmake-project helm-etags-plus cmake-mode auto-highlight-symbol volatile-highlights company-jedi jedi-core helm-c-yasnippet flycheck-irony company-irony irony company foreign-regexp helm-gtags centimacro quickrun ruby-block ruby-end bm cuda-mode helm-swoop helm magit sequential-command shell-pop smartrep multiple-cursors region-bindings-mode expand-region markdown-mode flycheck anzu undo-tree popwin init-loader)))
  '(reb-re-syntax (quote foreign-regexp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -74,3 +74,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)

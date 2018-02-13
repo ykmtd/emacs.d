@@ -5,7 +5,7 @@
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 (setq irony-lang-compile-option-alist
-      (quote ((c++-mode . "c++ -std=c++11 -lstdc++ -march=native -I/home/matsuda/include")
+      (quote ((c++-mode . "c++ -std=c++11 -lstdc++ -march=native -I/home/yuki_matsuda/include")
               (c-mode . "c")
               (objc-mode . "objective-c"))))
 
@@ -29,4 +29,9 @@
              (setq c++-basic-offset 4)
              (setq c-basic-offset 4)
              (setq tab-width 4)
+             ))
+
+(add-hook 'c-mode-hook
+          '(lambda ()
+             (setq comment-start "//" comment-end "")
              ))

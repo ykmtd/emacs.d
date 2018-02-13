@@ -33,9 +33,9 @@
 (define-key region-bindings-mode-map "o" 'mc/sort-regions)
 (define-key region-bindings-mode-map "O" 'mc/reverse-regions)
 
-;; shell-pop
-(global-unset-key (kbd "C-t"))
-(global-set-key (kbd "C-t") 'shell-pop)
+;; ;; shell-pop
+;; (global-unset-key (kbd "C-t"))
+;; (global-set-key (kbd "C-t") 'shell-pop)
 
 ;; sequential-command
 (global-set-key "\C-a" 'seq-home)
