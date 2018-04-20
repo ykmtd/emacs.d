@@ -2,7 +2,7 @@
 
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-arround t)
-(setq company-idle-delay 0.2)
+(setq company-idle-delay 0.4)
 
 (add-to-list 'company-backends 'company-irony)
 ;; (add-to-list 'company-backends 'company-jedi)

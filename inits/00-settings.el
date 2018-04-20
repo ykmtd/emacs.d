@@ -14,6 +14,9 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+;; show column number
+(setq column-number-mode t)
+
 ;; show-paren
 (show-paren-mode t)
 
@@ -90,7 +93,7 @@
 
 ;; recentf
 (when (require 'recentf nil t)
-  (setq recentf-max-saved-items 2000)
+  (setq recentf-max-saved-items 10000)
   (setq recentf-exclude '(".recentf"))
   (setq recentf-auto-save-timer
         (run-with-idle-timer 30 t 'recentf-save-list))

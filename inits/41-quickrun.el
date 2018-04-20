@@ -8,7 +8,7 @@
                                   "%e"))
                         (:remove . "%e")
                         (:description . "Compile C++ file with 'gcc -std=c++11' and execute"))
-                      :mode 'c++-mode)
+                      :default "c++")
 
 (when (executable-find "iverilog")
   (quickrun-add-command "iverilog"
