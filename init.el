@@ -44,6 +44,7 @@
     company-jedi
     volatile-highlights
     auto-highlight-symbol
+    symbol-overlay
     ))
 
 (let ((not-installed (loop for x in installing-package-list

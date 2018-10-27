@@ -72,3 +72,6 @@
 ;; quickrun
 (global-set-key (kbd "C-\\") 'quickrun)
 (global-set-key (kbd "M-\\") 'helm-quickrun)
+
+;; symbol-overlay
+(global-set-key (kbd "C-c m") 'symbol-overlay-put)
