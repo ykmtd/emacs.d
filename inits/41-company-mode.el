@@ -1,4 +1,6 @@
-(global-company-mode +1)
+(require 'company)
+
+(global-company-mode)
 
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-arround t)
@@ -35,3 +37,14 @@
 
 (define-key company-active-map (kbd "C-h") nil)
 (define-key company-active-map (kbd "M-d") 'company-show-doc-buffer)
+
+;; yasnipettと連携
+(defvar company-mode/enable-yas t
+  "Enable yasnippet for all backends.")
+(defun company-mode/backend-with-yas (backend)
+  (if (or (not company-mode/enable-yas) (ans (listp backend) (member 'company-yasnippet backend)))
+      backend
+    (append (if (consp backend) backend (list backend))
+            '(:with company-yasnippet))))
+
+(setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))

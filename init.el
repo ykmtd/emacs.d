@@ -56,22 +56,3 @@
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(foreign-regexp/regexp-type (quote ruby))
- '(global-linum-mode t)
- '(package-selected-packages
-   (quote
-    (markdown-mode+ dumb-jump counsel neotree flycheck-status-emoji cmake-project helm-etags-plus cmake-mode auto-highlight-symbol volatile-highlights company-jedi jedi-core helm-c-yasnippet flycheck-irony company-irony irony company foreign-regexp helm-gtags centimacro quickrun ruby-block ruby-end bm cuda-mode helm-swoop helm magit sequential-command shell-pop smartrep multiple-cursors region-bindings-mode expand-region markdown-mode flycheck anzu undo-tree popwin init-loader)))
- '(reb-re-syntax (quote foreign-regexp)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
