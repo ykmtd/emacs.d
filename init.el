@@ -23,7 +23,6 @@
     region-bindings-mode
     multiple-cursors
     smartrep
-    shell-pop
     sequential-command
     magit
     helm
@@ -34,13 +33,13 @@
     quickrun
     centimacro
     helm-gtags
-    foreign-regexp
     company
     irony
     company-irony
     flycheck-irony
     helm-c-yasnippet
     jedi-core
+    py-autopep8
     company-jedi
     volatile-highlights
     auto-highlight-symbol

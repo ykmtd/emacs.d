@@ -1,7 +1,6 @@
 ;; python
 (require 'jedi-core)
 (require 'py-autopep8)
-(require 'flymake-python-pyflakes)
 
 (setq jedi:complete-on-dot t)
 (setq jedi:use-shortcuts t)

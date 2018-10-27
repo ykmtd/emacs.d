@@ -32,7 +32,7 @@
 (setq completion-ignore-case t)
 
 ;; linum
-(custom-set-variables '(global-linum-mode t))
+(global-linum-mode t)
 (setq linum-format "%3d ")
 (setq linum-delay t)
 (defadvice linum-schedule (around my-linum-schedule () activate)
