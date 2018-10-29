@@ -9,24 +9,15 @@
          )
        auto-mode-alist))
 
-(add-hook 'cuda-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+;; (add-hook 'cuda-mode-hook 'irony-mode)
+;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 ;; (setq irony-lang-compile-option-alist
 ;;       (quote ((cuda-mode . "nvcc"))))
 
-(defun ad-irony--lang-compile-option ()
-  (defvar irony-lang-compile-option-alist)
-  (let ((it (cdr-safe (assq major-mode irony-lang-compile-option-alist))))
-    (when it (append '("-x") (split-string it "\s")))))
-(advice-add 'irony--lang-compile-option :override #'ad-irony--lang-compile-option)
-(defun irony--lang-compile-option ()
-  (irony--awhen (cdr-safe (assq major-mode irony-lang-compile-option-alist))
-    (append '("-x") it)))
-
 (add-hook 'cuda-mode-common-hook
           '(lambda ()
-             (google-set-c-style)
+             ;; (google-set-c-style)
              (electric-pair-mode t)
              (electric-indent-mode t)
              (irony-mode 1)
