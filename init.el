@@ -44,6 +44,7 @@
     volatile-highlights
     auto-highlight-symbol
     symbol-overlay
+    string-inflection
     ))
 
 (let ((not-installed (loop for x in installing-package-list
