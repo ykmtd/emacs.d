@@ -1,13 +1,14 @@
 ;; google-c-style
 ;; (require 'google-c-style)
+(require 'irony)
 
 (add-hook 'c-mode-common-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 (setq irony-lang-compile-option-alist
-      (quote ((c++-mode . "c++ -std=c++11 -lstdc++ -march=native -I/home/yuki_matsuda/include")
-              (c-mode . "c")
-              (objc-mode . "objective-c"))))
+      `((c++-mode . ,(format "c++ -std=c++11 -march=native -I%s" (expand-file-name "~/include")))
+        (c-mode . ,(format "c -std=c99 -I%s" (expand-file-name "~/include")))
+        (objc-mode-mode . "objective-c")))
 
 (defun ad-irony--lang-compile-option ()
   (defvar irony-lang-compile-option-alist)

@@ -1,4 +1,5 @@
 ;; cuda-mode
+(require 'irony)
 
 ;; google-c-style
 (setq auto-mode-alist
@@ -9,11 +10,12 @@
          )
        auto-mode-alist))
 
-;; (add-hook 'cuda-mode-hook 'irony-mode)
-;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-hook 'cuda-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
-;; (setq irony-lang-compile-option-alist
-;;       (quote ((cuda-mode . "nvcc"))))
+(add-to-list 'irony-lang-compile-option-alist
+             (cons 'cuda-mode (format "c++ -std=c++11 -march=native -I%s" (expand-file-name "~/include"))))
+(add-to-list 'irony-supported-major-modes 'cuda-mode)
 
 (add-hook 'cuda-mode-common-hook
           '(lambda ()
