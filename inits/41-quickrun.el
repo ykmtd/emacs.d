@@ -24,7 +24,9 @@
                         '((:command . "python3")
                           (:exec . ("%c %s"))
                           (:description . "Run python"))
-                        :mode 'python-mode))
+                        :mode 'python-mode
+                        :default "python"))
+
 
 (when (executable-find "gimli")
   (quickrun-add-command "markdown-gimli"
