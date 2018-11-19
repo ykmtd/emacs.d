@@ -30,6 +30,7 @@
              (setq c++-basic-offset 4)
              (setq c-basic-offset 4)
              (setq tab-width 4)
+             (c-set-offset 'innamespace 0)
              ))
 
 (add-hook 'c-mode-hook
