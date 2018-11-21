@@ -31,6 +31,7 @@
              (setq c-basic-offset 4)
              (setq tab-width 4)
              (c-set-offset 'innamespace 0)
+             (c-set-offset 'inextern-lang 0)
              ))
 
 (add-hook 'c-mode-hook
