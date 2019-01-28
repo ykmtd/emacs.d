@@ -43,6 +43,7 @@
     string-inflection
     yatex
     cmake-mode
+    highlight-indent-guides
     ))
 
 (let ((not-installed (loop for x in installing-package-list
