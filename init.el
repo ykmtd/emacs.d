@@ -44,6 +44,7 @@
     yatex
     cmake-mode
     highlight-indent-guides
+    elpy
     ))
 
 (let ((not-installed (loop for x in installing-package-list

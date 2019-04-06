@@ -11,6 +11,8 @@
 
              (jedi:setup)
 
+             (package-initialize)
+             (elpy-enable)
              ))
 
 (setq jedi:complete-on-dot t)
