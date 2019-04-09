@@ -2,6 +2,8 @@
 ;; (require 'google-c-style)
 (require 'irony)
 
+(setq c-mode-common-hook nil)
+
 (add-hook 'c-mode-common-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
